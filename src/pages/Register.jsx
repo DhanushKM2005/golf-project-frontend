@@ -20,8 +20,8 @@ export default function Register() {
       await refreshUser()
       navigate('/dashboard')
     } catch (err) {
-      setError('Registration failed — that username or email may already be taken.')
-    }
+  setError(err.message)
+}
   }
 
   return (
